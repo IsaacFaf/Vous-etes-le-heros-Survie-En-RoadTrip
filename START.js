@@ -117,3 +117,10 @@ LOCKVinChasseur = {
         action:"goToChapter('START')"
     }],
 }
+
+
+
+
+
+console.log(chaptersObj[chapterName]['subtitle']);
+console.log(chaptersObj[chapterName]['text']);
