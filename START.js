@@ -84,13 +84,14 @@ OursRoadTrip = {
     text:"En continuant votre RoadTrip avec l'ours, vous apercevez au loin une cabane de chasseur qui semble habité. Impossible de passer innaperçu sans leurs attirer l'attention.",
     options:[SauveOurs = {
         text:"Essayez de sauver l'ours",
-        action:"goToChapter('SauveOurs')"
+        action:"goToChapter('SauveOurs')",
+        action:vinTrouver = true,
     }, NuireOurs = {
         text:"Essayez dans profiter pour se débarasser de l'ours",
         action:"goToChapter('NuireOurs')"
     }, LOCKVinChasseur = {
         text:"Proposez du vin au chasseur",
-        action:"goToChapter('LOCKVinChasseur')"
+        action:"vinTrouver"
     }],
 },
 SauveOurs = {
@@ -124,3 +125,13 @@ LOCKVinChasseur = {
 
 console.log(chaptersObj[chapterName]['subtitle']);
 console.log(chaptersObj[chapterName]['text']);
+let vinTrouver = false;
+
+function OursRoadTrip(){
+    if(vinTrouver == true){
+        goToChapter('LOCKVinChasseur')
+    };
+    if(vinTrouver == false){
+        goToChapter('OursRoadTrip')
+    };
+};
