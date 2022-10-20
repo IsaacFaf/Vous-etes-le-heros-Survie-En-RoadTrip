@@ -42,10 +42,15 @@ body{
 
 .bouton *{
     border-radius: 25%;
-
+    border: 2px solid;
+    border-color: black;
+    color: white;
     background-color: #4C3957;
     
     
+}
+.bouton *:hover{
+    background-color: teal;
 }
 .bouton{
     display: flex;

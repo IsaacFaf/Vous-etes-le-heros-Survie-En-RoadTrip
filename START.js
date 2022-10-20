@@ -51,6 +51,15 @@ ChaletAbandon: {
         action:"goToChapter('Chalet')"
     }],
 },
+Chalet:{
+    subtitle:"Mauvais chalet",
+    img:"assets/img/MaisonOurs.jpg",
+    text:"Il semblerait que vous êtes tombé dans le chalet de la famille ours.",
+    options:[{
+        text:"Recommencez",
+        action:"goToChapter('START')",
+    }],
+},
 Banane: {
     subtitle:"Ouch!",
     img:"assets/img/banannier.jpg",
@@ -133,7 +142,7 @@ LOCKVinChasseur: {
         action:"goToChapter('START')"
     }],
 }}
-
+goToChapter("START")
 function goToChapter(chapitre){
 
     const subtitle = document.querySelector(".subtitle");
