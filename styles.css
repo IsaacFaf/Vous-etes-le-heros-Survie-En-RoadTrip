@@ -7,7 +7,9 @@ body{
     height: 100vh;
     
 }
-.imgchange
+.imgchange{
+    width: 48vw;
+}
 .game{
     background-color: #41658A;
     color: white;
@@ -19,19 +21,20 @@ body{
     padding-bottom: 100px;
     
 }
-.titre{
+.title{
     
     font-family: axia-stencil, sans-serif;
     font-weight: 900;
     font-style: normal;
 }
-.soustitre{
+.subtitle{
     font-family: axia, sans-serif;
     font-weight: 900;
     font-style: normal;
 }
 .parag{
     text-align: center;
+    background-color: #4C3957;
     font-family: axia, sans-serif;
     font-weight: 300;
     font-style: normal;

@@ -1,3 +1,10 @@
+function goToChapter(chapitre){
+    const subtitle = document.querySelector(".subtitle");
+    const text = document.querySelector(".parag");
+    const bouton = document.querySelector(".bouton");
+    const action = document.querySelector(".bouton");
+}
+
 let chaptersObj = {
 START: {
     subtitle:"START",
