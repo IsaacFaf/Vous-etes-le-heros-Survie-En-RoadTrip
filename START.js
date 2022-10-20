@@ -175,3 +175,4 @@ function checkvin(){
         goToChapter('OursRoadTrip')
     };
 };
+console.log("exécuter goToChapter('START')")
