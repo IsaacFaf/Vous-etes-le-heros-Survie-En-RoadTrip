@@ -8,7 +8,7 @@ body{
     
 }
 .imgchange{
-    width: 48vw;
+    max-width: 500px;
 }
 .game{
     background-color: #41658A;
@@ -34,25 +34,13 @@ body{
 }
 .parag{
     text-align: center;
-    background-color: #4C3957;
+    
     font-family: axia, sans-serif;
     font-weight: 300;
     font-style: normal;
 }
-.bouton1{
 
-    background-color: #4C3957;
-    border-radius: 25%;
-    
-    
-    
-}
-.bouton2{
-    border-radius: 25%;
-
-    background-color: #4C3957;
-}
-.bouton3{
+.bouton *{
     border-radius: 25%;
 
     background-color: #4C3957;

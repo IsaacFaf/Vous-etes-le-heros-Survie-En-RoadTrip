@@ -2,7 +2,7 @@
 
 let chapterObj = {
 START: {
-    subtitle:"START",
+    subtitle:"L'histoire commence",
     img: "assets/img/debut.jpg",
     text:"Vous arrivez enfin à vos vacances d'été! Comme à chaque année, vous commencez toujours vos vacances avec un RoadTrip pour déconnecter du travail. Vous avez donc fini votre valise et êtes prêt à partir. À l'instant de barrer la porte, vous apercevez une hache. Vous vous posez la question s'il serait préférable de l'apporter pendant le RoadTrip.",
     options:[{
@@ -15,7 +15,7 @@ START: {
 },
 
 PasHache: {
-    subtitle:"PasHache",
+    subtitle:"Chapitre 1",
     img:"assets/img/oursbloque.jpg",
     text:"Vous avez décidé de ne pas prendre la hache. Vous avez débuté votre RoadTrip et tout semble bien se dérouler jusqu'à ce qu'un ours vous bloque la route. Impossible de l'éviter ou de faire marche arrière, il vous restes pas beaucoup d'option et il faut choisir vite!!",
     options:[{
@@ -28,7 +28,7 @@ PasHache: {
 },
 
 DefierCorp: {
-    subtitle:"DefierCorp",
+    subtitle:"Défi d'envergure",
     img:"assets/img/ContourOuEau.jpg",
     text:"Vous avez décidé de le défier en corp à corp. Après une heure de combat acharné, vous êtes tous les deux en mauvaise état mais il te bloque toujours la route. Vous n'avez plus le choix, il vous faut fuir. Mais comment?",
     options:[{
@@ -40,7 +40,7 @@ DefierCorp: {
     }],
 },
 ChaletAbandon: {
-    subtitle:"ChaletAbandon",
+    subtitle:"Chalet suspicieux",
     img:"assets/img/ContourOuEau.jpg",
     text:"Vous avez réussi a vous enfuir mais vous avez besoin de manger et de vous mettre à l'abri rapidement. Vous voyez au loin un chalet et un bannanier. Serait-il plus sécuritaire de se réfugier dans le chalet en premier?",
     options:[{
@@ -52,7 +52,7 @@ ChaletAbandon: {
     }],
 },
 Banane: {
-    subtitle:"Banane",
+    subtitle:"Ouch!",
     img:"assets/img/banannier.jpg",
     text:"Vous avez aperçu l'ours en essayant de vous cacher. Vous êtes tombé sur une banane. MORT. ",
     options:[{
@@ -61,7 +61,7 @@ Banane: {
     }],
 },
 AvecHache: {
-    subtitle:"AvecHache",
+    subtitle:"Chapitre 1",
     img:"assets/img/oursbloque.jpg",
     text:"Vous avez décidé de prendre la hache. Vous avez débuté votre RoadTrip et tout semble bien se dérouler jusqu'à ce qu'un ours vous bloque la route. Impossible de l'éviter ou de faire marche arrière, il vous restes pas beaucoup d'option et il faut choisir vite!!",
     options:[{
@@ -73,7 +73,7 @@ AvecHache: {
     }],
 },
 AttaqueHache: {
-    subtitle:"AttaqueHache",
+    subtitle:"Combat d'envergure",
     img:"assets/img/mortOursBloque.jpg",
     text:"L'ours s'est énervé et votre hache n'a pas suffit à gagner votre combat. Vous êtes mort.",
     options:[{
@@ -82,7 +82,7 @@ AttaqueHache: {
     }],
 },
 OffrirVin: {
-    subtitle:"OffrirVin",
+    subtitle:"Une offre à ne pas refuser",
     img:"assets/img/VinOurs.jpg",
     text:"L'ours, quoique surpris, accepte l'offre et vous apprenez à vous connaître. L'ours semble bien vous apprécier et il vous a obligé de continuer votre RoadTrip avec lui.",
     options:[{
@@ -91,24 +91,24 @@ OffrirVin: {
     }],
 },
 OursRoadTrip: {
-    subtitle:"OursRoadTrip",
+    subtitle:"Un dangé pour votre ami",
     img:"assets/img/chasseur.jpg",
     text:"En continuant votre RoadTrip avec l'ours, vous apercevez au loin une cabane de chasseur qui semble habité. Impossible de passer innaperçu sans leurs attirer l'attention.",
     options:[{
         text:"Essayez de sauver l'ours",
-        action:"goToChapter('SauveOurs')",// vinTrouver = true,
+        action: "AvoirVin('SauveOurs')",
         
     }, {
         text:"Essayez dans profiter pour se débarasser de l'ours",
         action:"goToChapter('NuireOurs')"
     }, {
         text:"Proposez du vin au chasseur",
-        action:"vinTrouver"
+        action:"checkvin()"
     }],
 },
 SauveOurs: {
-    subtitle:"SauveOurs",
-    img:"assets/img/OursDeuise.jpg",
+    subtitle:"Tentative de sauvetage",
+    img:"assets/img/OursDeguise.jpg",
     text:"Déguiser l'ours comme votre compagne à fonctionné! En continuant le Road Trip ensemble, vous avez trouvé encore plus de vin et puisque l'ours a bien aimer votre vin. Il décide donc de vous tuer pour en avoir plus pour lui. MORT",
     options:[{
         text:"Essayez de trouver d'autres fins. (VOUS AVEZ TROUVEZ (+) DE VINS! UTILE POUR UNE FIN CACHÉE)",
@@ -116,7 +116,7 @@ SauveOurs: {
     }],
 },
 NuireOurs: {
-    subtitle:"NuireOurs",
+    subtitle:"Adieu ours! Où plûtot adieu à vous!",
     img:"assets/img/hunting.jpg",
     text:"Vous attirez l'attention des chasseurs, C'est votre RoadTrip en solo après tout ! Mais il semblerait que avoir crier a fait peur aux chasseurs. Vous avez reçu une balle de fusil de chasse. MORT",
     options:[{
@@ -125,7 +125,8 @@ NuireOurs: {
     }],
 },
 LOCKVinChasseur: {
-    subtitle:"LOCKVinChasseur",
+    subtitle:"Fin secrète",
+    img:"assets/img/MeilleurFin.jpg",
     text:"Vous êtes rendu un groupe à faire le Road Trip. L'ours s'entend super bien avec les chasseurs. Vous decidez de vivre tous ensemble puisque vous vous entendez bien autour d'une bonne bouteille de vin! FIN!",
     options:[{
         text:"Vous avez trouvé la meilleure fin mais vous pouvez toutefois recommencer et trouver les autres fins!",
@@ -133,50 +134,44 @@ LOCKVinChasseur: {
     }],
 }}
 
-//function goToChapter(chapitre){
+function goToChapter(chapitre){
 
-  //  const subtitle = document.querySelector(".subtitle");
-    //const text = document.querySelector(".parag");
-    //const bouton = document.querySelector(".bouton");
-    //const img = document.querySelector(".imgchange");
-    //subtitle.innerHTML = chapterObj[chapitre]["subtitle"];
-    //text.innerHTML = chapterObj[chapitre]["text"];
-    //img.src = chapterObj[chapitre]["img"];
-//};
-function test(){
-    console.log("test")
-}
-
-
-
-function goToChapter(chapter) {
-    subtitle.innerHTML = chapterObj[chapter]["subtitle"];
-    text.innerHTML = chapterObj[chapter]["text"];
-    image.src = chapterObj[chapter]["img"]
-    btnpanel.innerHTML = "";
-    for(i = 0; i < chapterObj[chapter]["options"].length; i++){
-        console.log(i);
-        let button = document.createElement("button")
-        let text = document.createTextNode(chapterObj[chapter]["options"][i]["text"]);
+    const subtitle = document.querySelector(".subtitle");
+    const text = document.querySelector(".parag");
+    const bouton = document.querySelector(".bouton");
+    const img = document.querySelector(".imgchange");
+    subtitle.innerHTML = chapterObj[chapitre]["subtitle"];
+    text.innerHTML = chapterObj[chapitre]["text"];
+    img.src = chapterObj[chapitre]["img"];
+    bouton.innerHTML="";
+    for (let i =0; i<chapterObj[chapitre]["options"].length; i++){
+        let button = document.createElement("button");
+        let text = document.createTextNode(chapterObj[chapitre]["options"][i]["text"]);
         button.appendChild(text);
-        button.setAttribute("onclick", chapterObj[chapter]["options"][0]["goto"])
-        btnpanel.appendChild(button);
-        ;
+        button.setAttribute("onclick", chapterObj[chapitre]["options"][i]["action"]);
+        bouton.appendChild(button);
+
     }
-
-}
-
+};
 
 
-/*console.log(chaptersObj[chapterName]['subtitle']);
-console.log(chaptersObj[chapterName]['text']);
+
+
+
+
+
 let vinTrouver = false;
 
-function OursRoadTrip(){
+function AvoirVin(chapitre){
+    vinTrouver = true;
+    goToChapter(chapitre);
+}
+
+function checkvin(){
     if(vinTrouver == true){
         goToChapter('LOCKVinChasseur')
     };
     if(vinTrouver == false){
         goToChapter('OursRoadTrip')
     };
-};*/
+};
