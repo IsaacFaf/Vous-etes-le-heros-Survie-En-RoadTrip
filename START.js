@@ -142,9 +142,18 @@ LOCKVinChasseur: {
         action:"goToChapter('START')"
     }],
 }}
-goToChapter("START")
-function goToChapter(chapitre){
 
+if(!localStorage.getItem("MemoryChapter" == null)){
+    goToChapter('START')
+}
+goToChapter(localStorage.getItem("MemoryChapter"));
+
+
+
+
+
+function goToChapter(chapitre){
+    
     
 
     const subtitle = document.querySelector(".subtitle");
@@ -169,19 +178,35 @@ function goToChapter(chapitre){
     bouton.addEventListener("click", function(){
         audio.play();
     })
+
+
+    const sauvegarde = localStorage.setItem("MemoryChapter", chapitre)
+    localStorage.getItem("Memory");
+    
+    
+    
 };
 
 
 
+    
+    
+    
+
+
+    
+
+    
 
 
 
 
-let vinTrouver = false;
+let vinTrouver = localStorage.getItem("ClefDuSecret");
 
 function AvoirVin(chapitre){
     vinTrouver = true;
     goToChapter(chapitre);
+    localStorage.setItem("ClefDuSecret", vinTrouver)
 }
 
 function checkvin(){
@@ -193,3 +218,8 @@ function checkvin(){
     };
 };
 console.log("exécuter goToChapter('START')")
+
+function resetMemory(){
+    localStorage.removeItem("ClefDuSecret");
+    goToChapter("START")
+}
