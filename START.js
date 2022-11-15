@@ -53,7 +53,7 @@ ChaletAbandon: {
 },
 Chalet:{
     subtitle:"Mauvais chalet",
-    img:"assets/img/MaisonOurs.jpg",
+    video:"assets/img/chaletOurs.gif",
     text:"Il semblerait que vous êtes tombé dans le chalet de la famille ours.",
     options:[{
         text:"Recommencez",
@@ -149,8 +149,10 @@ function goToChapter(chapitre){
     const text = document.querySelector(".parag");
     const bouton = document.querySelector(".bouton");
     const img = document.querySelector(".imgchange");
+    const video = document.querySelector(".imgchange");
     subtitle.innerHTML = chapterObj[chapitre]["subtitle"];
     text.innerHTML = chapterObj[chapitre]["text"];
+    video.src = chapterObj[chapitre]["video"];
     img.src = chapterObj[chapitre]["img"];
     bouton.innerHTML="";
     for (let i =0; i<chapterObj[chapitre]["options"].length; i++){
