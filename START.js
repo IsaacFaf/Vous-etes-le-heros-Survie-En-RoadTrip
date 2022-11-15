@@ -3,7 +3,7 @@
 let chapterObj = {
 START: {
     subtitle:"L'histoire commence",
-    img: "assets/img/debut.jpg",
+    img:"assets/img/debut.jpg",
     text:"Vous arrivez enfin à vos vacances d'été! Comme à chaque année, vous commencez toujours vos vacances avec un RoadTrip pour déconnecter du travail. Vous avez donc fini votre valise et êtes prêt à partir. À l'instant de barrer la porte, vous apercevez une hache. Vous vous posez la question s'il serait préférable de l'apporter pendant le RoadTrip.",
     options:[{
         text:"Ne pas prendre la hache",
@@ -16,7 +16,7 @@ START: {
 
 PasHache: {
     subtitle:"Chapitre 1",
-    img:"assets/img/oursbloque.jpg",
+    img:"assets/video/BloqueRoute.gif",
     text:"Vous avez décidé de ne pas prendre la hache. Vous avez débuté votre RoadTrip et tout semble bien se dérouler jusqu'à ce qu'un ours vous bloque la route. Impossible de l'éviter ou de faire marche arrière, il vous restes pas beaucoup d'option et il faut choisir vite!!",
     options:[{
         text:"Défiez l'ours au corp à corp",
@@ -29,7 +29,7 @@ PasHache: {
 
 DefierCorp: {
     subtitle:"Défi d'envergure",
-    img:"assets/img/ContourOuEau.jpg",
+    img:"assets/video/LacOuContour.gif",
     text:"Vous avez décidé de le défier en corp à corp. Après une heure de combat acharné, vous êtes tous les deux en mauvaise état mais il te bloque toujours la route. Vous n'avez plus le choix, il vous faut fuir. Mais comment?",
     options:[{
         text:"Longez le lac par la forêt",
@@ -53,7 +53,7 @@ ChaletAbandon: {
 },
 Chalet:{
     subtitle:"Mauvais chalet",
-    video:"assets/img/chaletOurs.gif",
+    img:"assets/video/chaletOurs.gif",
     text:"Il semblerait que vous êtes tombé dans le chalet de la famille ours.",
     options:[{
         text:"Recommencez",
@@ -71,7 +71,7 @@ Banane: {
 },
 AvecHache: {
     subtitle:"Chapitre 1",
-    img:"assets/img/oursbloque.jpg",
+    img:"assets/video/BloqueRoute.gif",
     text:"Vous avez décidé de prendre la hache. Vous avez débuté votre RoadTrip et tout semble bien se dérouler jusqu'à ce qu'un ours vous bloque la route. Impossible de l'éviter ou de faire marche arrière, il vous restes pas beaucoup d'option et il faut choisir vite!!",
     options:[{
         text:"Lui offrir un verre de vin",
@@ -83,7 +83,7 @@ AvecHache: {
 },
 AttaqueHache: {
     subtitle:"Combat d'envergure",
-    img:"assets/img/mortOursBloque.jpg",
+    img:"assets/video/combatUnContreUn.gif",
     text:"L'ours s'est énervé et votre hache n'a pas suffit à gagner votre combat. Vous êtes mort.",
     options:[{
         text:"Recommencez pour trouvez d'autres fins",
@@ -126,7 +126,7 @@ SauveOurs: {
 },
 NuireOurs: {
     subtitle:"Adieu ours! Où plûtot adieu à vous!",
-    img:"assets/img/hunting.jpg",
+    img:"assets/video/PeurChasseur.gif",
     text:"Vous attirez l'attention des chasseurs, C'est votre RoadTrip en solo après tout ! Mais il semblerait que avoir crier a fait peur aux chasseurs. Vous avez reçu une balle de fusil de chasse. MORT",
     options:[{
         text:"Réessayez pour trouver d'autres fins",
@@ -144,6 +144,8 @@ LOCKVinChasseur: {
 }}
 goToChapter("START")
 function goToChapter(chapitre){
+
+    
 
     const subtitle = document.querySelector(".subtitle");
     const text = document.querySelector(".parag");
@@ -163,6 +165,10 @@ function goToChapter(chapitre){
         bouton.appendChild(button);
 
     }
+    const audio = document.querySelector(".audio");
+    bouton.addEventListener("click", function(){
+        audio.play();
+    })
 };
 
 
