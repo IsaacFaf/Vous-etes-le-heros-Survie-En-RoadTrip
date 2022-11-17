@@ -203,21 +203,22 @@ function goToChapter(chapitre){
 
 
 
+let vinTrouver = localStorage.setItem("ClefDuSecret", false);
 
-let vinTrouver = localStorage.getItem("ClefDuSecret");
 
 function AvoirVin(chapitre){
     vinTrouver = true;
     goToChapter(chapitre);
-    localStorage.setItem("ClefDuSecret", vinTrouver)
+    localStorage.setItem("ClefDuSecret", true)
 }
 
 function checkvin(){
-    if(vinTrouver == true){
-        goToChapter('LOCKVinChasseur')
+    if(localStorage.getItem("ClefDuSecret") =="true"){
+        goToChapter('LOCKVinChasseur');
     };
-    if(vinTrouver == false){
-        goToChapter('OursRoadTrip')
+    if(localStorage.getItem("ClefDuSecret") == "false"){
+        goToChapter('OursRoadTrip');
+        
     };
 };
 console.log("exécuter goToChapter('START')")
