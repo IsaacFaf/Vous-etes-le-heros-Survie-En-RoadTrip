@@ -143,11 +143,14 @@ LOCKVinChasseur: {
     }],
 }}
 
-if(!localStorage.getItem("MemoryChapter" == null)){
-    goToChapter('START')
+if(localStorage.getItem("MemoryChapter")){
+    goToChapter(localStorage.getItem("MemoryChapter"));
+    
 }
-goToChapter(localStorage.getItem("MemoryChapter"));
-
+else{
+    goToChapter('START')
+    
+}
 
 
 
