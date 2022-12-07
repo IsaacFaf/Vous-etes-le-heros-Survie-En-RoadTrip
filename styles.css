@@ -58,3 +58,29 @@ body{
     justify-content: space-evenly;
     align-items: center;
 }
+.btn4{
+    position: absolute;
+    border-radius: 25%;
+    border: 2px solid;
+    border-color: black;
+    color: white;
+    background-color: #4C3957;
+    top: 2.5vh;
+    transform: translateX(-285px);
+}
+.btn4:hover{
+    background-color: teal;
+}
+.btn5{
+    position: absolute;
+    border-radius: 25%;
+    border: 2px solid;
+    border-color: black;
+    color: white;
+    background-color: #4C3957;
+    top:2.5vh;
+    transform: translateX(295px);
+}
+.btn5:hover{
+    background-color: teal;
+}

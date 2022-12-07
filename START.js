@@ -179,9 +179,27 @@ function goToChapter(chapitre){
     }
     const audio = document.querySelector(".audio");
     bouton.addEventListener("click", function(){
-        audio.play();
+        if(localStorage.getItem("audio") == "true"){
+            console.log("son COUPÉ");
+        }
+        else{
+            audio.play();
+        }
+        
     })
-
+    let audioOnOff = document.querySelector(".btn5");
+    localStorage.getItem("audio")
+    
+    audioOnOff.addEventListener("click", function(){
+        if(localStorage.getItem("audio") == "true"){
+            localStorage.setItem("audio", false);
+            
+        }
+        else{
+            localStorage.setItem("audio", true);
+            
+        }
+    })
 
     const sauvegarde = localStorage.setItem("MemoryChapter", chapitre)
     localStorage.getItem("Memory");
@@ -227,3 +245,8 @@ function resetMemory(){
     localStorage.removeItem("ClefDuSecret");
     goToChapter("START")
 }
+
+    let reset = document.querySelector(".btn4");
+    reset.addEventListener("click", function(){
+        localStorage.clear()
+    })
