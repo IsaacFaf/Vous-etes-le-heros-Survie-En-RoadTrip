@@ -143,19 +143,13 @@ LOCKVinChasseur: {
     }],
 }}
 
-if(localStorage.getItem("MemoryChapter")){
-    goToChapter(localStorage.getItem("MemoryChapter"));
-    
-}
-else{
-    goToChapter('START')
-    
-}
 
 
 
 
+let body = document.querySelector("body")
 function goToChapter(chapitre){
+
     
 
     const subtitle = document.querySelector(".subtitle");
@@ -176,16 +170,6 @@ function goToChapter(chapitre){
         bouton.appendChild(button);
 
     }
-    const audio = document.querySelector(".audio");
-    bouton.addEventListener("click", function(){
-        if(localStorage.getItem("audio") == "true"){
-            console.log("son COUPÉ");
-        }
-        else{
-            audio.play();
-        }
-        
-    })
     let audioOnOff = document.querySelector(".btn5");
     localStorage.getItem("audio")
     
@@ -199,18 +183,40 @@ function goToChapter(chapitre){
             
         }
     })
+    
+    const audio = document.querySelector(".audio");
+    bouton.addEventListener("click", function(){
+        if(localStorage.getItem("audio") == "true"){
+            console.log("son COUPÉ");
+        }
+        else{
+            audio.play();
+        }
+        
+    })
+
 
     const sauvegarde = localStorage.setItem("MemoryChapter", chapitre)
     localStorage.getItem("Memory");
     
     
+    body.classList.remove(body.classList[0])
+    body.classList.add(chapitre)
+    console.log(body.classList)
     
 };
 
 
 
     
+if(localStorage.getItem("MemoryChapter")){
+    goToChapter(localStorage.getItem("MemoryChapter"));
     
+}
+else{
+    goToChapter('START')
+    
+}
     
 
 
