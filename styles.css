@@ -78,9 +78,19 @@ body{
     border-color: black;
     color: white;
     background-color: #4C3957;
-    top:2.5vh;
-    transform: translateX(295px);
+    top:3.5vh;
+    transform: translateX(320px);
 }
 .btn5:hover{
     background-color: teal;
+}
+.txt5{
+    position: absolute;
+    border-radius: 25%;
+    border: 2px solid;
+    border-color: black;
+    color: white;
+    background-color: #4C3957;
+    top:1vh;
+    transform: translateX(265px);
 }

@@ -157,7 +157,6 @@ else{
 
 function goToChapter(chapitre){
     
-    
 
     const subtitle = document.querySelector(".subtitle");
     const text = document.querySelector(".parag");
@@ -244,9 +243,15 @@ console.log("exécuter goToChapter('START')")
 function resetMemory(){
     localStorage.removeItem("ClefDuSecret");
     goToChapter("START")
+    document.body.style.backgroundColor = "red"
 }
 
     let reset = document.querySelector(".btn4");
     reset.addEventListener("click", function(){
         localStorage.clear()
+        goToChapter("START");
     })
+
+
+    
+       
